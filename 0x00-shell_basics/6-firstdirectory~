@@ -1,0 +1,5 @@
+#!/bin/bash
+# - - - - -
+# [Author] Victor Hernandez
+# - - - - - 
+ls  -l -a -n

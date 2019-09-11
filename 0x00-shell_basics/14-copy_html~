@@ -1,0 +1,6 @@
+#!/bin/bash
+# - - - - -
+# [Author] Victor Hernandez
+# - - - - -
+ln -s /bin/ls ./__ls__
+
