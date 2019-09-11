@@ -1,5 +1,2 @@
 #!/bin/bash
-# - - - - -
-# [Author] Victor Hernandez
-# - - - - -
 file /tmp/iamafile

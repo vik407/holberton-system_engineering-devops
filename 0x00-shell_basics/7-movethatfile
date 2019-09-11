@@ -1,5 +1,2 @@
 #!/bin/bash
-# - - - - -
-# [Author] Victor Hernandez
-# - - - - -
 mv /tmp/betty /tmp/holberton
