@@ -1,0 +1,24 @@
+total 88
+drwxrwxr-x 2 ubuntu ubuntu 4096 Sep 15 18:34 .
+drwxrwxr-x 6 ubuntu ubuntu 4096 Sep 15 15:45 ..
+-rwxrw-r-- 1 ubuntu ubuntu   32 Sep 15 16:42 0-hello_world
+-rw-rw-r-- 1 ubuntu ubuntu    2 Sep 15 16:01 0-hello_world~
+-rwxrw-r-- 1 ubuntu ubuntu   28 Sep 15 17:03 1-confused_smiley
+-rwxrw-r-- 1 ubuntu ubuntu   32 Sep 15 16:50 1-confused_smiley~
+-rwxrw-r-- 1 ubuntu ubuntu   28 Sep 15 18:11 2-hellofile
+-rwxrw-r-- 1 ubuntu ubuntu   28 Sep 15 18:09 2-hellofile~
+-rwxrw-r-- 1 ubuntu ubuntu   39 Sep 15 18:13 3-twofiles
+-rwxrw-r-- 1 ubuntu ubuntu   28 Sep 15 18:12 3-twofiles~
+-rwxrw-r-- 1 ubuntu ubuntu   35 Sep 15 18:16 4-lastlines
+-rwxrw-r-- 1 ubuntu ubuntu   39 Sep 15 18:14 4-lastlines~
+-rwxrw-r-- 1 ubuntu ubuntu   29 Sep 15 18:18 5-firstlines
+-rwxrw-r-- 1 ubuntu ubuntu   35 Sep 15 18:17 5-firstlines~
+-rwxrw-r-- 1 ubuntu ubuntu   49 Sep 15 18:25 6-third_line
+-rwxrw-r-- 1 ubuntu ubuntu   29 Sep 15 18:19 6-third_line~
+-rwxrw-r-- 1 ubuntu ubuntu   90 Sep 15 18:29 7-file
+-rwxrw-r-- 1 ubuntu ubuntu   49 Sep 15 18:27 7-file~
+-rwxrw-r-- 1 ubuntu ubuntu   90 Sep 15 18:32 8-cwd_state
+-rw-rw-r-- 1 ubuntu ubuntu   17 Sep 15 18:28 \*\\'"Holberton School"\'\\*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 ubuntu ubuntu  914 Sep 15 18:22 iacta
+-rw-rw-r-- 1 ubuntu ubuntu    0 Sep 15 18:34 ls_cwd_content
+-rw-rw-r-- 1 ubuntu ubuntu   20 Sep 15 15:45 README.md
