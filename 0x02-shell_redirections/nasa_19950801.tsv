@@ -1,0 +1,10 @@
+host	logname	time	method	url	response	bytes	referer	useragent
+202.236.34.35	   -   	807256884	GET 		/images/whatsnew.gif	200	651
+202.236.34.36	      -   		807256885	GET 			/images/whatsnew.gif	200	651
+202.236.34.36	         -   		807256886	GET 			/images/whatsnew.gif 	200	651
+202.236.34.38		    -   	807256887	GET 			/images/whatsnew.gif 	200	651
+202.236.34.36		       -   	807256888	GET 			/images/whatsnew.gif 	200	651
+202.236.34.40		          -   	807256889	GET 			/images/whatsnew.gif 	200	651
+202.236.34.41			     -   		807256890		GET 			/images/whatsnew.gif	200	651
+202.236.34.42			        -   		807256891		GET 			/images/whatsnew.gif 	200	651
+202.236.34.43				   -   		807256892		GET 			/images/whatsnew.gif 	200	651
