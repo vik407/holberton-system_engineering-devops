@@ -1,1 +1,17 @@
 #!/usr/bin/env bash
+#4 bad luck, 8 is your chance
+
+I=1
+while [ $I -le 10 ]
+do
+	if [ $I -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ $I -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	((I++))
+done
