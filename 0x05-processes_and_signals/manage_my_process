@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#Write a manage_my_process Bash script that:
+#Indefinitely writes I am alive! to the file /tmp/my_process
+#In between every I am alive! message, the program should pause for 2 seconds
+
+DEST='/tmp/my_process'
+
+I=1
+while [ $I -lt 2 ]
+do
+	echo "I am alive!" >> $DEST
+	sleep 2
+done

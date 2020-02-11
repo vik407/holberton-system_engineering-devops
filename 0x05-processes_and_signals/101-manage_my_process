@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# This script manages manage_my_process
+
+PROC='/var/run/my_process.pid'
+ARGV=$1
+
+	if [ "$ARGV" == "start" ]
+		then
+			./manage_my_process &
+				echo "$!" > $PROC
+				echo "manage_my_process started"
+	elif [ "$ARGV" == "stop" ]
+		then
+		kill "$(cat $PROC)"
+		rm $PROC
+			echo "manage_my_process stopped"
+	elif [ "$ARGV" == "restart" ]
+		then
+		if [ -e $PROC ]
+			then
+			kill "$(cat $PROC)"
+			rm $PROC
+		fi
+		./manage_my_process &
+			echo "$!" > $PROC
+		echo "manage_my_process restarted"
+	else
+		echo "Usage: manage_my_process {start|stop|restart}"
+		exit 1
+	fi
+exit 0
