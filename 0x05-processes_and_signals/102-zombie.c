@@ -1,20 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
-
-/**
- * infinite_while - never ending loop
- * Return: 0 on success
- */
-int infinite_while(void)
-{
-	while (1)
-	{
-		sleep(1);
-	}
-	return (0);
-}
-
+int infinite_while(void);
 /**
  * main - Write a C program that creates 5 zombie processes.
  * Return: displays Zombie process created, PID: ZOMBIE_PID 0 if success
@@ -35,5 +22,17 @@ int main(void)
 		}
 	}
 	infinite_while();
+	return (0);
+}
+/**
+ * infinite_while - never ending loop
+ * Return: 0 on success
+ */
+int infinite_while(void)
+{
+	while (1)
+	{
+		sleep(1);
+	}
 	return (0);
 }
