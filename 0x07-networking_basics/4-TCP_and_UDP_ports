@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#Get the TCP and UDP Ports
 netstat -pl
