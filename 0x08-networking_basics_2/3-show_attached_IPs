@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#Show attached ips task script
 ifconfig | grep "inet " | cut -d ':' -f2 | cut -d ' ' -f1
