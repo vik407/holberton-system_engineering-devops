@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Change the ip modifiying the etc host file
 cp /etc/hosts ~/hosts.new
 sed -i s/127.0.0.1/127.0.0.2/ ~/hosts.new
 echo -e "\n8.8.8.8\tfacebook.com" >> ~/hosts.new
