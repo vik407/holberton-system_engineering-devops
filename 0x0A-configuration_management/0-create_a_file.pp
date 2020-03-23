@@ -1,10 +1,9 @@
-# Using Puppet, create a holberton file in /tmp.
+# Using Puppet, create a holberton file in /tmp
 
-file { 'holberton':
-  path    => '/tmp/holberton',
+file { '/tmp/holberton':
   ensure  => file,
-  content => 'I love Puppet',
+  mode    => '0744',
   owner   => 'www-data',
   group   => 'www-data',
-  mode    => '0744',
+  content => 'I love Puppet',
 }
