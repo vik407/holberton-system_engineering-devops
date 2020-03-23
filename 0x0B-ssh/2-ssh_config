@@ -53,6 +53,6 @@ Host *
     GSSAPIAuthentication yes
     GSSAPIDelegateCredentials no
     HostName 52.200.131.229
-    Username ubuntu
+    User ubuntu
     IdentityFile ~/.ssh/holberton
     PasswordAuthentication no
