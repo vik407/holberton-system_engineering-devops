@@ -7,4 +7,4 @@ sudo apt -y install nginx
 sudo ufw allow 'Nginx HTTP'
 # Index file and start
 echo "Holberton School for the win!" > /usr/share/nginx/html/index.html &&
-sudo /etc/init.d/nginx start
+sudo /etc/init.d/nginx restart
