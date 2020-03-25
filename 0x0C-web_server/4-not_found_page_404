@@ -18,4 +18,4 @@ sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.co
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
 sed -i '/listen 80 default_server/a error_page 404 /custom_404.html; location = /custom_404.html {root /usr/share/nginx/html;\n internal;}' /etc/nginx/sites-available/default
 # Restart
-sudo service nginx restart
+sudo service nginx start
