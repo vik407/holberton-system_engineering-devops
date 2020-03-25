@@ -3,6 +3,11 @@
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
+# Firewall port 80
+sudo ufw allow 'Nginx HTTP'
+# Fix permission problems on folder, grant access to ubuntu group Ubuntu 14.04
+sudo chgrp -R ubuntu /var/www/html
+sudo chmod -R g+w /var/www/html
 # Index file
 sudo echo 'Holberton School' | sudo tee /var/www/html/index.nginx-debian.html
 # Edit configuration file? stop the service!
@@ -10,7 +15,7 @@ sudo service nginx stop
 # Redirection
 sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n' /etc/nginx/sites-available/default
 # 404 Page
-echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
-sed -i '/listen 80 default_server/a error_page 404 /custom_404.html; location = /custom_404.html {root /usr/share/nginx/html;\n internal;}' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404_error.html
+sed -i '/listen 80 default_server/a error_page 404 /404_error.html; location = /404_error.html {root /usr/share/nginx/html;\n internal;}' /etc/nginx/sites-available/default
 # Restart
 sudo service nginx start
