@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Installing nginx on server
 
-sudo apt update &&
-sudo apt -y install nginx
+sudo apt-get -y update &&
+sudo apt-get -y install nginx
 # Firewall port 80
 sudo ufw allow 'Nginx HTTP'
 # Fix permission problems on folder, grant access to ubuntu group Ubuntu 14.04
