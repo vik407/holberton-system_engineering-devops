@@ -9,5 +9,5 @@ sudo ufw allow 'Nginx HTTP'
 sudo chgrp -R ubuntu /usr/share/nginx/html
 sudo chmod -R g+w /usr/share/nginx/html
 # Index file and start
-echo 'Holberton School' | sudo tee /usr/share/nginx/html/index.html
+sudo echo 'Holberton School' | sudo tee /var/www/html/index.nginx-debian.html
 sudo service nginx start
