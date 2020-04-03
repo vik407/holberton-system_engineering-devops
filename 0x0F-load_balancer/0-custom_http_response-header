@@ -4,5 +4,5 @@
 sudo apt update
 sudo apt -y install nginx
 sudo ufw allow 'Nginx HTTP'
-sed -i "/listen 80 default_server/a \\\t# Header:\n\tadd_header X-Served-By \"$HOSTNAME\";\n" /etc/nginx/sites-available/default
-service nginx restart
+sudo sed -i "/listen 80 default_server/a \\\t# Header:\n\tadd_header X-Served-By \"$HOSTNAME\";\n" /etc/nginx/sites-available/default
+sudo service nginx restart
