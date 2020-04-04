@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Test Load Balancer
+
+I=1
+while [ $I -le 5 ]
+do
+	curl -Is 54.226.28.51
+	((I++))
+done
