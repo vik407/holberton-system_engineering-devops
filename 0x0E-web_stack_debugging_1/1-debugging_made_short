@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Make it sweet and short
-sudo cat /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default
+sudo cat /etc/nginx/sites-available/default | sudo tee /etc/nginx/sites-enabled/default
 sudo service nginx start
-sudo echo "for real" > /run/nginx.pid
+sudo echo "for real" | sudo tee /run/nginx.pid
