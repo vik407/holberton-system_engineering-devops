@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Debug server, connect to the container
+# Check the default nginx configuration on sites enabled
+# Found listening on port 8080 on the configuration.
+
+service nginx stop
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sed -i 's/8080/80/g' /etc/nginx/sites-available/default
+service nginx start
