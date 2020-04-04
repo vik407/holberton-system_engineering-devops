@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Test headers
+curl -sI 54.146.160.217 | grep X-Served-By
+curl -sI 52.200.131.229 | grep X-Served-By

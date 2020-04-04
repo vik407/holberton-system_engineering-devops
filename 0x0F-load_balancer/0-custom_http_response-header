@@ -1,7 +1,52 @@
 #!/usr/bin/env bash
-# Configure web servers for load balancer - add header
+# Configure location redirection rule
+function getHost(){
+    local host;
+    host=$(hostname)
+    if [ "${host:0:2}" == 'gc' ];then
+	host=$(echo "$host" | cut -d '-' -f 2-4)
+	sudo hostnamectl set-hostname "$host"
+    fi
+    echo "$host"
+}
+sudo apt-get -y update && sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo /etc/init.d/nginx stop
+block="/etc/nginx/sites-available/default"
+sudo tee $block > /dev/null <<EOF                                    
+server {
 
-apt update
-apt install -y nginx
-sed -i "26i add_header X-Served-By \$HOSTNAME;" /etc/nginx/nginx.conf
-service nginx restart
+    listen 80 default_server;
+
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+
+    index index.html index.htm index.nginx-debian.html;
+
+    server_name localhost;
+    add_header X-Served-By $(getHost);
+
+    error_page 404 /custom_404.html;
+
+    location = /custom_404.html {
+             root /var/www/html;
+             internal;
+    }
+
+    location / {
+
+        try_files \$uri \$uri/ =404;
+
+    }
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+
+}
+                                                                    
+EOF
+sudo echo "Holberton School for the win!" | sudo tee /var/www/html/index.html
+sudo echo -e "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+
+sudo nginx -t && sudo /etc/init.d/nginx restart
