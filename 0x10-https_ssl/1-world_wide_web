@@ -1,1 +1,16 @@
 #!/usr/bin/env bash
+# Display information about subdomains
+if [ "$#" -eq 2 ]
+then
+    subdomains=$2
+else
+    subdomains=("www" "lb-01" "web-01" "web-02")
+fi
+# Loop on domains
+for subdomain in "${subdomains[@]}"
+do
+    # The subdomain www is a A record and points to 54.210.47.110
+    echo -n "The subdomain $subdomain is"
+    dig "$subdomain.$1" | grep -A1 'ANSWER SECTION:' | tail -n -1 | awk '{ print " is a " $4 " record and points to " $5}'
+done
+exit 0
