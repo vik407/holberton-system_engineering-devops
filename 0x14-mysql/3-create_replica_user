@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Before you get started with your primary-replica synchronization, you need one more thing in place. On your primary MySQL server (web-01), create a new user for the replica server.
 
-sudo mysql -uroot -p -e "CREATE USER 'replica_user'@'%' IDENTIFIED BY 'project280hbtn';"
-sudo mysql -uroot -p -e "GRANT REPLICATION SLAVE ON *.* TO 'replica_user'@'%';"
-sudo mysql -uroot -p -e "grant select on mysql.user to 'holberton_user'@'localhost'"
+sudo mysql -uroot -p "$1" -e "CREATE USER 'replica_user'@'%' IDENTIFIED BY 'project280hbtn';"
+sudo mysql -uroot -p "$1" -e "GRANT REPLICATION SLAVE ON *.* TO 'replica_user'@'%';"
+sudo mysql -uroot -p "$1" -e "grant select on mysql.user to 'holberton_user'@'localhost'"
