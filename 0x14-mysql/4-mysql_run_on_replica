@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Setup the replica server
+
+sudo ufw allow mysql
+sudo mysql -uroot -p -e "CHANGE MASTER TO MASTER_HOST='52.200.131.229',MASTER_USER='replica_user', MASTER_PASSWORD='project280hbtn';"
+sudo mysql -uroot -p -e "START SLAVE;"
+sudo mysql -uroot -p -e "show slave status\G;"
