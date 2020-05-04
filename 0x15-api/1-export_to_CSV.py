@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Python script that uses a REST API
 """
+import csv
 import requests
 from sys import argv
-import csv
 
 
 def get_usr_tocsv(uid):
