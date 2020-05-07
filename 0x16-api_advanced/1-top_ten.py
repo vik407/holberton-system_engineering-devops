@@ -15,4 +15,4 @@ def top_ten(subreddit):
         for i in range(10):
             print(response['data']['children'][i]['data']['title'])
     except Exception:
-        return 0
+        print(None)
