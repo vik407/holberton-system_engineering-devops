@@ -33,6 +33,4 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
                 if num != 0:
                     print('{}: {}'.format(name, num))
     except Exception:
-        if response['error'] == 404:
-            print('')
-            return
+        return
