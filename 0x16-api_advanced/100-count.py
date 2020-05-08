@@ -24,7 +24,9 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
                 counter[word] += item['data']['title'].lower(
                     ).split(' ').count(word.lower())
         if _after is not None:
-            count_words(subreddit, word_list, _after, counter, 1)
+            rec_count = count_words(subreddit, word_list, _after, counter, 1)
+            if not rec_count:
+                return
         else:
             str = sorted(counter.items(), key=lambda kv: kv[1], reverse=True)
             for name, num in str:
