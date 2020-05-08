@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """A file to make a query to an endpoint"""
-from requests import request
+from requests import get
 
 
 def count_words(subreddit, word_list, after="", counter={}, ini=0):
@@ -15,7 +15,7 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
 
     url = "https://api.reddit.com/r/{}/hot?after={}".format(subreddit, after)
     headers = {"User-Agent": "Python3"}
-    response = request("GET", url, headers=headers).json()
+    response = get(url, headers=headers).json()
     try:
         top = response['data']['children']
         _after = response['data']['after']
