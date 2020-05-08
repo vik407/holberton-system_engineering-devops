@@ -9,7 +9,6 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
     of all hot articles, and prints a sorted count of given keywords
     (case-insensitive, delimited by spaces. Javascript should count as
     javascript, but java should not)"""
-    # if is the first call process the word_list
     if ini == 0:
         for word in word_list:
             counter[word] = 0
