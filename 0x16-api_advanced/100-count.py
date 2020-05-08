@@ -32,5 +32,6 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
             for name, num in str:
                 if num != 0:
                     print('{}: {}'.format(name, num))
+            print("")
     except Exception:
         return None
