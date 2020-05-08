@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""A file to make a query to an endpoint
-"""
+"""A file to make a query to an endpoint"""
 from requests import request
 
 
@@ -8,7 +7,8 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
     """A recursive function that queries the Reddit API, parses the title
     of all hot articles, and prints a sorted count of given keywords
     (case-insensitive, delimited by spaces. Javascript should count as
-    javascript, but java should not)"""
+    javascript, but java should not)
+    """
     if ini == 0:
         for word in word_list:
             counter[word] = 0
@@ -16,7 +16,6 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
     url = "https://api.reddit.com/r/{}/hot?after={}".format(subreddit, after)
     headers = {"User-Agent": "Python3"}
     response = request("GET", url, headers=headers).json()
-
     try:
         top = response['data']['children']
         _after = response['data']['after']
