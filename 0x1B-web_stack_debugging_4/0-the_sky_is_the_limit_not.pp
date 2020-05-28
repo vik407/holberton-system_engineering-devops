@@ -5,8 +5,7 @@ exec { 'raise-limits':
   command => 'sed -i "s/-n 15/ -n 30000/g" /etc/default/nginx'
 }
 
-service { 'nginx':
-    ensure  => 'running',
-    enable  => true,
-    require => Package['nginx'],
+exec { 'restart-nginx':
+  path    => '/etc/init.d/',
+  command => 'nginx restart'
 }
