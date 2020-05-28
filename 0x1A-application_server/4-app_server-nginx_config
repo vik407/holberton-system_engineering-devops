@@ -16,6 +16,16 @@ server {
                 proxy_pass http://0.0.0.0:5002/api;
         }
 
+        # 0x1A-application_server - 4-app_server-nginx_config
+        location / {
+                proxy_pass http://127.0.0.1:5003/2-hbnb;
+        }
+
+        # 0x1A-application_server - 4-app_server-nginx_config
+        location /static {
+                proxy_pass http://127.0.0.1:5003;
+        }
+
         # 404 Page:
         error_page 404 /custom_404.html; location = /custom_404.html {
         root /usr/share/nginx/html;
@@ -36,10 +46,4 @@ server {
         index index.html index.htm index.nginx-debian.html;
 
         server_name _;
-
-        location / {
-                # First attempt to serve request as file, then
-                # as directory, then fall back to displaying a 404.
-                try_files $uri $uri/ =404;
-        }
 }
