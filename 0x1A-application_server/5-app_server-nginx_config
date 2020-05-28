@@ -18,12 +18,12 @@ server {
 
         # 0x1A-application_server - 4-app_server-nginx_config
         location / {
-                proxy_pass http://127.0.0.1:5003/2-hbnb;
+                proxy_pass http://0.0.0.0:5003/2-hbnb;
         }
 
         # 0x1A-application_server - 4-app_server-nginx_config
         location /static {
-                proxy_pass http://127.0.0.1:5003;
+                proxy_pass http://0.0.0.0:5003;
         }
 
         # 404 Page:
